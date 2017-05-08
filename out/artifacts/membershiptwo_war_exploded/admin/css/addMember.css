@@ -1,0 +1,196 @@
+.return{
+    float: left;
+    margin-left: 20px;
+    font-weight: 100;
+}
+.return:hover{
+    cursor: pointer;
+}
+.addMember{
+    width: 1200px;
+    margin: 0 auto;
+}
+.uploadAvatar{
+    /*width: 450px;*/
+    /*margin: 0 auto;*/
+    margin-top: 80px;
+}
+.uploadAvatar label{
+    float: left;
+}
+.uploadAvatar .picture{
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    background-color: silver;
+}
+.uploadAvatar .picture img{
+    width: 100%;
+}
+.uploadAvatar .upload{
+    float: left;
+    width: 75px;
+    height: 35px;
+    margin-left: 20px;
+    border-radius: 5px;
+    background-color: #2E86E1;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    margin-top: 30px;
+}
+.uploadAvatar .upload:hover{
+    cursor: pointer;
+}
+.addInformation{
+    width: 450px;
+    float: left;
+    margin-top: 80px;
+}
+.addInformation .information{
+    width: 100%;
+    height: 66px;
+    /*overflow: hidden;*/
+    /*margin-top: 20px;*/
+}
+.information label,.choice label{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+.information input{
+    width: 300px;
+    height: 34px;
+    outline: none;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+.choice{
+    width: 100%;
+}
+.choice input{
+    margin-left: 40px;
+}
+.add_user{
+    width: 100%;
+    text-align: center;
+}
+#btn_add_user{
+    background: none;
+    border: 0;
+    background: #3087e1;
+    border-radius: 5px;
+    padding: 9px 130px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 55px;
+
+    /*margin-left: 0px;*/
+}
+.error{
+    display: inline-block;
+    color: red;
+    font-size: 14px;
+    width: 72%;
+    margin-left: 28%;
+    height: 26px;
+}
+.line{
+    width: 1px;
+    height: 410px;
+    float: left;
+    background-color: #E3E3E3;
+    margin-top: 70px;
+    margin-left: 150px;
+}
+.screen{
+    position: relative;
+}
+ .screen:hover{
+    float: left;
+    cursor: pointer;
+}
+ .screen img{
+    position: absolute;
+    top:15px;
+    right: 30px;
+     -webkit-transform:rotate(-90deg)
+}
+ .screen label{
+     display: inline-block;
+     width: 100px;
+     float: left;
+     margin-top: 10px;
+ }
+ .screen ul{
+    display: none;
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 440px;
+    border: 1px solid #D7D8DB;
+    border-bottom: none;
+    z-index: 999999;
+}
+ .screen ul li{
+    list-style: none;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #D7D8DB;
+    background-color: white;
+    line-height: 30px;
+}
+ .screen{
+    float: left;
+    position: relative;
+    display: inline-block;
+}
+ .screen .screenText{
+    display: inline-block;
+    width: 280px;
+    height: 38px;
+    border: 1px solid #A9A9A9;
+    line-height: 38px;
+    padding-left: 30px;
+     margin-left: 23px;
+    font-size: 14px;
+}
+.tips{
+    position: absolute;
+    display: none;
+    width: 312px;
+    max-height: 210px;
+    background-color: white;
+    border: 1px solid #A9A9A9;
+    left: 125px;
+    top: 37px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 900;
+}
+.tips::-webkit-scrollbar {
+    width: 8px;
+}
+.tips::-webkit-scrollbar-thumb {
+    background-color: #A9A9A9;
+}
+.tips::-webkit-scrollbar-track {
+    background-color: #F1F1F1;
+} /* 滚动条的滑轨背景颜色 */
+.tips::-webkit-scrollbar-button {
+    background-color: #F1F1F1;
+} /* 滑轨两头的监听按钮颜色 */
+.tips li{
+    list-style: none;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.tips li:hover{
+    cursor: pointer;
+}

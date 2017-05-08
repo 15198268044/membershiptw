@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+a,a:hover{
+    text-decoration:none; color:white;cursor: pointer
+}
+.xlactive{
+    background-color: #3993F5 !important;
+    color: white !important;
+}
+.ydactive{
+    background-color: #3993F5 !important;
+    color: white !important;
+}
+.backstageBox{
+    width: 100%;
+    min-width: 1200px;
+}
+.header{
+    width: 100%;
+    height: 120px;
+}
+.header .title{
+    width: 100%;
+    height: 50px;
+    background-color: #2E86E1;
+    color: white;
+    line-height: 50px;
+}
+.header .title span{
+    padding-left: 50px;
+}
+.header nav{
+    width: 100%;
+    height: 70px;
+    background-color: #2B2B2B;
+    line-height: 70px;
+}
+.header nav ul{
+    margin-left: 50px;
+}
+.header nav ul li{
+    float: left;
+    width: 150px;
+    height: 67px;
+    list-style: none;
+    color: white;
+    text-align: center;
+}
+.header nav ul li a{
+    display: inline-block;
+    width: 150px;
+    height: 67px;
+}
+.active{
+    border-bottom: 3px solid #2E86E1;
+    background-color: #404040;
+}
+.header nav ul li:hover{
+    cursor: pointer;
+    border-bottom: 3px solid #2E86E1;
+    background-color: #404040;
+}
+.header nav ul li img{
+    vertical-align: middle;
+}
+.header nav ul li span{
+    margin-left: 5px;
+}
+.content{
+    width: 100%;
+}
+.titleBox{
+    width: 100%;
+    height: 150px;
+    background-color: #F6F6F6;
+}
+.titleBox .title{
+    float: left;
+    width: 70%;
+    height: 50px;
+    background-color: white;
+    margin-left: 15%;
+    margin-top: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+}
+
+.exit{
+    float: right;
+    color: white;
+    margin-right: 50px;
+}
+.exit:hover{
+    cursor: pointer;
+}
+
+.pageBar{
+    float: right;
+    margin-right: 5%;
+    margin-top: 50px;
+    color: #666666;
+}
+.pageBar div{
+    display: inline-block;
+    float: left;
+}
+.flipButton{
+    width: 60px;
+    height: 30px;
+    border:1px solid #CCCCCC;
+    line-height: 30px;
+    text-align: center;
+}
+.flipButton:hover{
+    cursor: pointer;
+}
+.previous img{
+    margin-left: 10px;
+}
+.numpages{
+    width: 32px;
+    height: 32px;
+    background-color: #2E86E1;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+}
+.pageCount{
+    width: 80px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+}
+.jumpPages{
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+}
+.jumpPages input{
+    display: inline-block;
+    width: 32px;
+    height: 28px;
+    outline: none;
+    text-align: center;
+    line-height: 28px;
+    border:1px solid #CCCCCC;
+    margin-top: -3px;
+}
+.determineJump{
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    background-color: #2E86E1;
+}
+.determineJump:hover{
+    cursor: pointer;
+}

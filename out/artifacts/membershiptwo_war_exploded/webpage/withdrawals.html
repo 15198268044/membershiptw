@@ -1,0 +1,62 @@
+
+            <div class="content">
+                <div class="w_head_box">
+                    <span class="w_head_right">
+                        <a class="pas"><img src="./images/setting.png" alt=""/></a>
+                    </span>
+                    <div class="w_head">
+                        <img src="" alt="" id="myhead"/>
+                    </div>
+                    <div class="w_head" style="padding-left: 20px;">
+                        <span id="username" class="w_head_text" style="line-height: 87px;"></span>
+                        <br/>
+                        <span class="w_head_text" >手机号：<label id="phone"></label></span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="tx_box">
+                    <div class="tx_div_nb" style="background:#18afb4;">
+                        <span class="tx_title_left">待提现金额：</span>
+                        <span class="tx_text">￥<label id="tx_new"></label></span>
+                    </div>
+                    <div class="lines"></div>
+                    <div class="tx_div_nb" style="background: #e45864;margin-left: 50px">
+                        <span class="tx_title_left">已提现金额：</span>
+                        <span class="tx_text">￥<label id="tx_old"></label></span>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="tx_box_div">
+                    <span class="w_head_right"><a class="click_tx"><img src="./images/setting.png" alt=""/></a></span>
+                    <div class="tx_div_tr">
+                        <span class="input_title">选择收款方式：</span>
+                        <input type="text" class="tx_input" id="banknum"/>
+                        <select class="tx_input" id="tx_select" style="width: 522px;">
+                            <option value="0"></option>
+                            <option value="1"></option>
+                        </select>
+                        <span class="tx_ts_span" style="display: none"><img src="./images/bottom.png" alt=""/></span>
+                        <a class="click_tx"><span style="color: red;font-size: 14px;padding-left: 20px;"></span></a>
+                    </div>
+                    <div class="tx_div_tr">
+                        <span class="input_title">提现金额：</span>
+                        <input type="text" class="tx_input" id="tatalmoney"/>
+                        <span class="tx_ts_span">元</span>
+                    </div>
+                    <div class="tx_div_tr">
+                        <span class="input_title">手续费：</span>
+                        <input style="color: #A9A9A9" type="text" class="tx_input" id="sxf" readonly="readonly"/>
+                        <span class="tx_ts_span">元</span>
+                    </div>
+                    <div class="tx_div_tr">
+                        <span class="input_title">实际提现金额：</span>
+                        <input style="color: #A9A9A9" type="text" class="tx_input" id="txm" readonly="readonly"/>
+                        <span class="tx_ts_span">元</span>
+                    </div>
+                    <div class="tx_div_tr">
+                        <span class="input_title"></span>
+                        <button id="btn_tx_submit">提交申请</button>
+                    </div>
+                </div>
+            </div>
+                    <script src="/webpage/js/withdrawals.js"></script>

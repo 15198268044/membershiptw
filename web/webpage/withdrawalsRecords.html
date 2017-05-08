@@ -1,0 +1,128 @@
+<style type="text/css">
+
+    *{ margin:0; padding:0;}
+
+    body { font:12px/1.5 Arial; color:#666;}
+
+    ul,li{ list-style:none;}
+
+    img{border:0 none;}
+
+    /*---------------------------------------demo css--------------------------------------------*/
+
+    .date_selector, .date_selector *{width: auto;height: auto;border: none;background: none;margin: 0;padding: 0;text-align: left;text-decoration: none;}
+
+    .date_selector{background:#fbfbfb;border: 1px solid #ccc;padding: 10px;margin:0;margin-top:-1px;position: absolute;z-index:100000;display:none;border-radius: 3px;box-shadow: 0 0 5px #aaa;box-shadow:0 2px 2px #ccc; width:220px;}
+
+    .date_selector_ieframe{position: absolute;z-index: 99999;display: none;}
+
+    .date_selector .nav{width: 17.5em;}
+
+    .date_selector .nav p{clear: none;}
+
+    .date_selector .month_nav, .date_selector .year_nav{margin: 0 0 3px 0;padding: 0;display: block;position: relative;text-align: center;}
+
+    .date_selector .month_nav{float: left;width: 40%;}
+
+    .date_selector .year_nav{float: left;width: 40%;}
+
+    .date_selector .month_name, .date_selector .year_name{font-weight: bold;line-height: 20px;}
+
+    .date_selector .button{display: block;position: absolute;top: 0;width:18px;height:18px;line-height:16px;font-weight:bold;color:#5985c7;text-align: center;font-size:12px;overflow:hidden;border: 1px solid #ccc;border-radius:2px;}
+
+    .date_selector .button:hover, .date_selector .button.hover{background:#5985c7;color: #fff;cursor: pointer;border-color:#3a930d;}
+
+    .date_selector .prev{left: 0;}
+
+    .date_selector .next{right: 0;}
+
+    .date_selector table{border-spacing: 0;border-collapse: collapse;clear: both;margin: 0; width:220px;}
+
+    .date_selector th, .date_selector td{width: 2.5em;height: 2em;padding: 0 !important;text-align: center !important;color: #666;font-weight: normal;}
+
+    .date_selector th{font-size: 12px;}
+
+    .date_selector td{border:1px solid #f1f1f1;line-height: 2em;text-align: center;white-space: nowrap;color:#5985c7;background: #fff;}
+
+    .date_selector td.today{background: #eee;}
+
+    .date_selector td.unselected_month{color: #ccc;}
+
+    .date_selector td.selectable_day{cursor: pointer;}
+
+    .date_selector td.selected{background:#2b579a;color: #fff;font-weight: bold;}
+
+    .date_selector td.selectable_day:hover, .date_selector td.selectable_day.hover{background:#5985c7;color: #fff;}
+
+    /*-----------------------------------------------------------------------------------*/
+
+</style>
+<form action="/web/drawals/getUserDrawals.do" method="get" id="withdrawalsRecordsListForm">
+<div class="content">
+    <div class="withdrawals">
+        <p class="title">提现记录</p>
+        <div class="lines"></div>
+        <div class="condition">
+            <div class="state">
+                <label>提现状态 : </label>
+                <div class="stateSelect screen">
+                    <span class="screenText" dataName="form" dataType="int" name="state" value="">全部</span>
+                    <img src="./images/triangle.png">
+                    <ul>
+                        <li value="">全部</li>
+                        <li value="0">申请中</li>
+                        <li value="1">银行处理中</li>
+                        <li value="2">提现成功</li>
+                        <li value="3">提现失败</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="approximateTime screen"><span class="screenText" dataName="form" dataType="int" name="time" value="">全部</span><img src="./images/triangle.png">
+                <ul>
+                    <li value="">全部</li>
+                    <li value="7">最近一周</li>
+                    <li value="30">最近一个月</li>
+                </ul>
+            </div>
+            <div class="time">
+                <label>起止时间 :</label>
+                <input  style="width:190px;height:30px;background: #fefefe;border: 1px solid #bbb;font-size: 14px;color: #333;padding-left:10px;border-radius: 3px;" type="text" class="date_picker" dataName="form" dataType="date" name="startTimeDate" value=""> —
+                <input  style="width:190px;height:30px;background: #fefefe;border: 1px solid #bbb;font-size: 14px;color: #333;padding-left:10px;border-radius: 3px;" type="text" class="date_picker" dataName="form" dataType="date" name="endTimeDate" value="">
+            </div>
+            <div class="query" id="query">查询</div>
+            <div style="clear: both"></div>
+        </div>
+        <div class="lines" style="margin-top: 50px"></div>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>申请时间</th>
+                    <th>提现银行 | 编号</th>
+                    <th>提现金额（元）</th>
+                    <th>手续费</th>
+                    <th>实际提现金额（元）</th>
+                    <th>处理完成时间</th>
+                    <th>状态</th>
+                    <th>申请人</th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="pageBar">
+
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+</form>
+<script type="text/javascript" src="/webpage/js/dataPack.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var date=$('.date_picker').date_input();
+    })
+</script>
+
+<script src="/webpage/js/withdrawalsRecords.js"></script>

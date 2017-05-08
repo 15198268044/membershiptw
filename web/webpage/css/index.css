@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+input{
+    font-size: 14px !important;
+}
+html{
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+body{
+    display: inline-block;
+    width: 100%;
+    height: 99%;
+    background-color: #ECEFF1;
+}
+.xlactive{
+    background-color: #3993F5 !important;
+    color: white !important;
+}
+.ydactive{
+    background-color: #3993F5 !important;
+    color: white !important;
+}
+.memberBox{
+    width: 100%;
+    min-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+.menuLeft{
+    position: absolute;
+    float: left;
+    width: 250px;
+    height: 100%;
+    min-height: 765px;
+    background-color: #2B2B2B;
+    z-index: 100;
+    zoom: 1;
+}
+.logo{
+    width: 142px;
+    height: 142px;
+    background: url("../images/logo.png") no-repeat 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.line{
+    width: 100%;
+    height:1px;
+    background-color: #3B3B3B;
+    margin-top: 50px;
+}
+nav{
+    width: 100%;
+    color: #dbdbdb;
+    font-size: 14px;
+}
+nav .title{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+nav ul{
+    margin-top: 20px;
+}
+.active{
+    background-color: #404040;
+    color: white !important;
+}
+nav ul li{
+    list-style: none;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 50px;
+}
+nav ul li a{
+    display: block;
+    width: 200px;
+    height: 50px;
+}
+nav ul li span{
+    margin-left: 20px;
+}
+nav ul li:hover{
+    cursor: pointer;
+}
+.contentRight{
+    float: left;
+    width: 100%;
+}
+.header{
+    /*width: 100%;*/
+    margin-left: 250px;
+    height: 80px;
+}
+.herder-left{
+    float: left;
+    width: 70%;
+    height: 100%;
+    background-color: white;
+}
+.herder-left div{
+    display: inline-block;
+    margin-top: 20px;
+}
+.herder-left i{
+    font-size: 30px;
+    margin-left: 50px;
+    color: #DBDBDB;
+
+}
+.herder-left input{
+    width: 200px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+.herder-right{
+    float: left;
+    width: 30%;
+    height: 80px;
+    background-color: #272727;
+    font-size: 14px;
+    color: #dbdbdb;
+    line-height: 80px;
+}
+.username{
+    float: left;
+    margin-left: 50px;
+}
+.clear{
+    clear: both;
+}
+.exit{
+    float: right;
+    margin-right: 30px;
+}
+.exit:hover{
+    cursor: pointer;
+}
+a,a:hover{ text-decoration:none; color:#dbdbdb;cursor: pointer}
+
+
+.pageBar{
+    float: right;
+    margin-right: 5%;
+    margin-top: 50px;
+    color: #666666;
+}
+.pageBar div{
+    display: inline-block;
+    float: left;
+}
+.flipButton{
+    width: 60px;
+    height: 30px;
+    border:1px solid #CCCCCC;
+    line-height: 30px;
+    text-align: center;
+}
+.flipButton:hover{
+    cursor: pointer;
+}
+.previous img{
+    margin-left: 10px;
+}
+.numpages{
+    width: 32px;
+    height: 32px;
+    background-color: #DA3644;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+}
+.pageCount{
+    width: 80px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+}
+.jumpPages{
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+}
+.jumpPages input{
+    display: inline-block;
+    width: 32px;
+    height: 28px;
+    outline: none;
+    text-align: center;
+    line-height: 28px;
+    border:1px solid #CCCCCC;
+    margin-top: -3px;
+}
+.determineJump{
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    background-color: #DA3644;
+}
+.determineJump:hover{
+    cursor: pointer;
+}

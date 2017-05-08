@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" 
+	xmlns="http://java.sun.com/xml/ns/persistence" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+	http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="jpa"  transaction-type="RESOURCE_LOCAL">
+	    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    	<class>com.ship.domain.SmsCode</class>
+    	<class>com.ship.domain.DbAdmin</class>
+    	<class>com.ship.domain.BankInfo</class>
+    	<class>com.ship.domain.SysParam</class>
+    	<class>com.ship.domain.VipUser</class>
+    	<class>com.ship.domain.WithDrawals</class>
+    	<class>com.ship.domain.BranchRecord</class>
+    	<class>com.ship.domain.UserBank</class>
+		<properties>
+		 <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+           <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/membershiptwo"/>
+           <property name="javax.persistence.jdbc.user" value="root"/>
+           <property name="javax.persistence.jdbc.password" value="root"/>
+           <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+           <property name="eclipselink.logging.level" value="FINE"/>
+           <property  name="eclipselink.ddl-generation"  value="create-tables"/>
+          	<!-- 设置外连接抓取树的最大深度 -->
+			<property name="hibernate.max_fetch_depth" value="3" />
+			<!-- 设定JDBC的Statement读取数据的时候每次从数据库中取出的记录条数 -->
+			<property name="hibernate.jdbc.fetch_size" value="20" />
+			<!-- 设定对数据库进行批量删除，批量更新和批量插入的时候的批次大小 -->
+			<property name="hibernate.jdbc.batch_size" value="10" />
+			<property name="hibernate.use_sql_comments" value="false" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.format_sql" value="false" />
+			<property name="hibernate.id.new_generator_mappings" value="true" />
+			<property name="hibernate.temp.use_jdbc_metadata_defaults" value="false" />
+        </properties>
+	</persistence-unit>
+
+
+</persistence>

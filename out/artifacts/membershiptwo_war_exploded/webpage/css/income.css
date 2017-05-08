@@ -1,0 +1,79 @@
+.content{
+    margin: 50px;
+    margin-left: 300px;
+    padding: 35px;
+    min-height: 770px;
+}
+.title_div{
+    width:40%;
+    float: left;
+    margin-left: 3%;
+    background: white;
+    position: relative;
+    text-align: center;
+    padding: 2.5%;
+}
+.nbtext{
+    display: inline-block;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+}
+#already,#balance,.fc{
+    font-size: 23px;
+}
+.btn_more:hover{
+    background: #ecebeb;
+    color: #000000;
+}
+.title_span_left{
+    font-size: 16px;
+    color: #333333;
+    position: absolute;
+    left:5%;
+    top:5%;
+}
+.title_span_right{
+    position: absolute;
+    right:1%;
+    bottom:3%;
+}
+.mysr_box{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+.btn_more{
+    display: inline-block;
+    background: #ecebeb;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+}
+.content_fc_div{
+    margin-top: 50px;
+}
+.title_div_fc{
+    position: relative;
+    width: 33%;
+    float: left;
+    margin-right: .5%;
+    text-align: center;
+    background: white;
+    padding: 70px 0 50px 0;
+}
+.title_span_right_2{
+    position: absolute;
+    right:5%;
+    top:5%;
+}
+#container{
+    margin-top: 50px;
+}

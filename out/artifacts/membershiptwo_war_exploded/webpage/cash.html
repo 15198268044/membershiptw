@@ -1,0 +1,67 @@
+ <div class="content">
+                <h4 style="font-weight: bold;width: 100%;padding-bottom: 20px;border-bottom: 1px solid #ccc;font-size: 16px">设置提现账号</h4>
+                <br/>
+                <div class="txzh_box">
+                    <span>选择提现方式：</span>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div class="txfs active" style="margin-left: 0">
+                        <p>对私银行账户</p>
+                        支持提现至个人银行借记卡
+                    </div>
+                    <div class="txfs">
+                        <p>支付宝账户</p>
+                        支持提现至支付宝
+                    </div>
+                    <div class="clear"></div>
+                    <br/>
+                    <p>
+                        <img src="/webpage/images/ts.png" alt=""/>
+                        1.请仔细填写账户信息，如果由于您填写错误导致资金流失，平台概不负责；
+                        <span class="zfbts">2.只支持提现到银行卡，不支持信用卡和存折。提现审核周期为3个工作日。</span>
+                    </p>
+                </div>
+                <div class="tx_box_div">
+                    <div class="tx_div_tr">
+                        <span class="input_title">发卡银行：</span>
+                        <select class="tx_input" id="tx_select" style="width: 522px;">
+
+                        </select>
+                    </div>
+                    <div class="tx_div_tr">
+                        <span class="input_title">开户银行地址：</span>
+                        <input type="text" id="bankaddress" class="tx_input" placeholder="准确填写银行卡开户银行地址，否则无法提现"/>
+                    </div>
+                    <div class="tx_div_tr">
+                        <span class="input_title">银行卡卡号：</span>
+                        <input type="text" id="banknum" class="tx_input" placeholder="只支持提现至借记卡，不支持信用卡和存折"/>
+                    </div>
+                    <div class="tx_div_tr">
+                        <span class="input_title">开卡人姓名：</span>
+                        <input type="text" id="bankuser" class="tx_input" placeholder="准确填写银行卡开户人姓名，否则无法提现"/>
+                    </div>
+                    <div class="tx_div_tr">
+                        <span class="input_title"></span>
+                        <a id="submit1"><button class="btn_tx_submit">确定</button></a>
+                        <a class="btn_back"><button class="back">返回</button></a>
+                    </div>
+
+                </div>
+                <div class="tx_box_div" style="display: none">
+                    <div class="tx_div_tr">
+                        <span class="input_title">支付宝账号：</span>
+                        <input type="text" id="zfbzh" class="tx_input" placeholder="准确填写支付宝账号，否则无法提现"/>
+                    </div>
+                    <div class="tx_div_tr">
+                        <span class="input_title">真实姓名：</span>
+                        <input type="text" id="zfbName" class="tx_input" placeholder="准确填写真实姓名，否则无法提现"/>
+                    </div>
+                    <div class="tx_div_tr">
+                        <span class="input_title"></span>
+                        <a id="submit2"><button class="btn_tx_submit">确定</button></a>
+                        <a class="btn_back"><button class="back">返回</button></a>
+                    </div>
+                </div>
+            </div>
+ <script src="/webpage/js/cash.js"></script>

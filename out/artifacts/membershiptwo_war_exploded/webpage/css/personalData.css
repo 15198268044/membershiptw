@@ -1,0 +1,180 @@
+.content{
+    margin: 50px;
+    margin-left: 300px;
+    background-color: white;
+    min-height: 710px;
+    padding: 30px;
+}
+.information{
+    width: 100%;
+    font-size: 16px;
+}
+.information .title{
+    color: #333333;
+    font-weight: bold;
+}
+.information .lines{
+    width: 100%;
+    height: 1px;
+    background-color: #D7D8DB;
+    margin: 20px 0;
+}
+.information .head span{
+    float: left;
+}
+.information .head .upload{
+    position: relative;
+    float: left;
+    width: 150px;
+    margin-left: 50px;
+ }
+#preview{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+#preview img{
+    width: 100% !important;
+    height: 100% !important;
+}
+.information .head .upload img{
+    width: 100%;
+    margin-top: 0 !important;
+}
+.information .head .upload .scbuttom{
+    width: 100%;
+    height: 30px;
+    background-color: #DA3644;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#headUrl{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 0px;
+    left: 0;
+    opacity: 0;
+}
+.information .head .upload div:hover{
+    cursor: pointer;
+}
+.binding{
+    width: 100%;
+    margin-top: 50px;
+}
+
+
+
+
+.binding-email,.binding-phone{
+    float: left;
+    width: 47%;
+}
+.binding-phone{
+    margin-left: 6%;
+}
+.binding-email>p,.binding-phone>p{
+    width: 100%;
+}
+.binding-email .email,.binding-phone .phone{
+    width: 100%;
+}
+.binding-email .email .email-left,.binding-phone .phone .phone-left{
+    float: left;
+}
+.binding-email .email .email-right,.binding-phone .phone .phone-right{
+    float: right;
+    color: #da3644;
+}
+.binding-email .email .email-right img,.binding-phone .phone .phone-right img{
+    margin-left: 10px;
+    -webkit-transform:rotate(-90deg)
+}
+.binding-email .email .email-right:hover,.binding-phone .phone .phone-right:hover{
+    cursor: pointer;
+}
+.reset{
+    display: none;
+    width: 100%;
+    font-size: 16px;
+    color: #333333;
+}
+.reset .lines{
+    width: 100%;
+    height: 1px;
+    background-color: #D7D8DB;
+    margin: 20px 0;
+}
+.reset .reset-email,.reset .binding-phone{
+    width: 100%;
+}
+.reset .reset-email input,.reset .reset-phone input{
+    width: 65%;
+    height: 30px;
+    padding-left: 10px;
+    margin-left: 30px;
+    outline: none;
+}
+.reset .send-code{
+    margin-top: 5px;
+}
+.reset .send-code button{
+    display: inline-block;
+    padding: 0 1%;
+    height: 32px;
+    line-height: 32px;
+    background-color: #2B2B2B;
+    color: #c2c2c2;
+    margin-left: 0.5%;
+    font-size: 14px;
+    outline: none;
+    border: none;
+}
+.reset .send-code button:hover{
+    cursor: pointer;
+}
+.reset .send-code input{
+    outline: none;
+    width: 43%;
+    height: 30px;
+    margin-left: 46px;
+    padding-left: 10px;
+}
+.reset .send-code div{
+    display: inline-block;
+    padding: 0 1%;
+    height: 32px;
+    line-height: 32px;
+    background-color: #2B2B2B;
+    color: #c2c2c2;
+    margin-left: 0.5%;
+    font-size: 14px;
+}
+.reset .send-code div:hover{
+    cursor: pointer;
+}
+.preservation{
+    width: 120px;
+    height: 32px;
+    background-color: #DA3644;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.preservation:hover{
+    cursor: pointer;
+}
+.error,.errors{
+    display: inline-block;
+    width: 200px;
+    margin-left: 110px;
+    color: red;
+    font-size: 14px;
+}

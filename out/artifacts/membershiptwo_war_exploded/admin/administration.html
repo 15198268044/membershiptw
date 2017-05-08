@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./css/template.css" rel="stylesheet">
+    <link href="./css/administration.css" rel="stylesheet">
+    <link href="./css/bomBox.css" rel="stylesheet">
+</head>
+<body>
+<div class="backstageBox">
+    <div class="header">
+        <div class="title"><span>管理员后台管理系统</span></div>
+        <nav>
+            <ul>
+                <li><a href="./profitSharing.html"><img src="./images/profitSharing.png"><span>分销分润</span></a></li>
+                <li><a href="./distributionSetting.html"><img src="./images/setting.png"><span>分销设置</span></a></li>
+                <li><a href="./withdrawals.html"><img src="./images/withdrawals.png"><span>提现申请</span></a></li>
+                <li><a href="./bank.html"><img src="./images/bank.png"><span>收款银行</span></a></li>
+                <li class="active"><a href="./administration.html"><img src="./images/administration.png"><span>会员管理</span></a></li>
+            </ul>
+            <div class="exit">退出</div>
+        </nav>
+    </div>
+    <form action="/admin/vipuser/getVipUser.do" method="get" id="administrationListForm">
+    <div class="content">
+        <div class="titleBox">
+            <div class="title">会员管理</div>
+        </div>
+        <div class="member">
+            <div class="condition">
+                <div class="addMember" id="addMember">添加会员</div>
+                <div class="memberName">
+                    <label>会员登录名</label>
+                    <input type="text" dataName="form" dataType="string" name="username" value="">
+                </div>
+                <div class="achievement screen">
+                    <span class="screenText" dataName="form" dataType="int" name="state" value="" >全部</span>
+                    <img src="./images/triangle.png" style=" -webkit-transform:rotate(0deg)">
+                    <ul>
+                        <li value="">全部</li>
+                        <li value="0">正常</li>
+                        <li value="1">冻结</li>
+                        <li value="2">禁止登陆</li>
+                    </ul>
+                </div>
+                <!--<div style="clear: both"></div>-->
+                <div class="time">
+                    <input  style="width:150px;height:30px;background: #fefefe;border: 1px solid #D7D8DB;font-size: 14px;color: #333;padding-left:10px;border-radius: 3px;" type="text" class="date_picker" dataName="form" dataType="date" name="startTimeDate" value=""> -
+                    <input  style="width:150px;height:30px;background: #fefefe;border: 1px solid #D7D8DB;font-size: 14px;color: #333;padding-left:10px;border-radius: 3px;" type="text" class="date_picker" dataName="form" dataType="date" name="endTimeDate" value="">
+                </div>
+                <div class="query" id="query">查询</div>
+                <div style="clear: both"></div>
+            </div>
+            <div class="memberTable">
+                <!--<div class="select">-->
+                    <!--<input type="checkbox"> 全选-->
+                    <!--<span style="margin-left: 30px">冻结</span>-->
+                    <!--<span>删除</span>-->
+                <!--</div>-->
+                <table id="table"  border="0" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th>会员头像</th>
+                            <th>会员登录名</th>
+                            <th>会员手机</th>
+                            <th>登陆次数</th>
+                            <th>上次登陆IP</th>
+                            <th>上次登陆时间</th>
+                            <th>真实姓名</th>
+                            <th>推荐人</th>
+                            <th>间接推荐人</th>
+                            <th>总业绩</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modifyMember" style="display: none">
+            <img class="close" src="/admin/images/close.png">
+            <div class="modifyInformation" style="margin-left: 50px">
+                <div class="information">
+                    <label>用户名</label>
+                    <input type="text" id="vipname">
+                    <span class="error"></span>
+                </div>
+                <div class="information">
+                    <label>登陆密码</label>
+                    <input type="password" id="password">
+                    <span class="error"></span>
+                </div>
+                <div class="information">
+                    <label>会员手机</label>
+                    <input type="text" id="phone">
+                    <span class="error"></span>
+                </div>
+                <div class="information">
+                    <label>真实姓名</label>
+                    <input type="text" id="realName">
+                    <span class="error"></span>
+                </div>
+                <div class="information">
+                    <label>身份证号</label>
+                    <input type="text" id="idcard">
+                    <span class="error"></span>
+                </div>
+                <div class="information" style="position: relative">
+                    <label>推荐人</label>
+                    <input type="text" id="referrercodeId">
+                    <ul class="tips" id="tips">
+                    </ul>
+                    <span class="error"></span>
+                </div>
+                <div class="choice" id="state">
+                    <label>是否启用</label>
+                    <input type="radio" style="margin-left: 20px" name="add_type" value="0" class="radio">正常
+                    <input type="radio" name="add_type" value="1" class="radio">冻结
+                    <input type="radio" name="add_type" value="2" class="radio">禁止登陆
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="modifyInformation" style="margin-left: 70px">
+                <div class="choice" id="mode">
+                    <label>提现方式</label>
+                    <span><input type="radio" style="margin-left: 20px" name="bank" value="0" class="radio">对私银行借记卡</span>
+                    <span><input type="radio" name="bank" value="1" class="radio">支付宝账户</span>
+                </div>
+                <div class="information screen bank" id="bank"  style="margin-top: 20px">
+                    <label>提现发卡银行</label>
+                    <span class="screenText" id="bankId">请选择银行</span>
+                    <img src="./images/triangle.png">
+                    <ul>
+                    </ul>
+                </div>
+                <div style="clear: both"></div>
+                <div class="information bank">
+                    <label>开户银行</label>
+                    <input type="text" id="bankAccount">
+                    <span class="error"></span>
+                </div>
+                <div class="information bank">
+                    <label>银行卡卡号</label>
+                    <input type="text" id="bankNum">
+                    <span class="error"></span>
+                </div>
+                <div class="information bank">
+                    <label>开卡人姓名</label>
+                    <input type="text" id="bankaccountname">
+                    <span class="error"></span>
+                </div>
+                <div class="information zfb" style="margin-top: 20px;display: none">
+                    <label>支付宝账号</label>
+                    <input type="text" id="zfbAccount">
+                    <span class="error"></span>
+                </div>
+            </div>
+            <div style="clear: both"></div>
+            <div class="modify_user">
+                <div id="modify_add_user">确认修改</div>
+            </div>
+        </div>
+        <div class="modifyMemberBg" style="display: none"></div>
+    </div>
+    </form>
+</div>
+<div class="pageBar">
+
+</div>
+<div id="bombBox">
+
+</div>
+<script src="/admin/js/jquery-1.11.3.min.js"></script>
+<script src="/admin/js/commons.js"></script>
+<script src="/admin/js/bomBox.js"></script>
+<script src="/admin/js/administration.js"></script>
+<script type="text/javascript" src="/webpage/js/dataPack.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var date=$('.date_picker').date_input();
+    })
+</script>
+</body>
+</html>

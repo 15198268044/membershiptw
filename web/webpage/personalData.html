@@ -1,0 +1,71 @@
+<div class="content">
+    <div class="information">
+        <p class="title">个人资料</p>
+        <div class="lines"></div>
+        <div class="head">
+            <span>头像设置 : </span>
+            <div  class="upload" >
+                <div id="preview">
+                    <img src="" id="imghead">
+                </div>
+                <input id="headUrl" type="file" onchange="previewImage(this)" />
+                <div class="scbuttom" id="upload">上传</div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <div class="binding">
+        <div class="binding-email">
+            <p>绑定邮箱 :</p>
+            <div class="email">
+                <div class="email-left">当前已绑定邮箱 : <span id="email"></span></div>
+                <div class="email-right">
+                    重置<img src="./images/drop-down.png">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+            <div class="reset">
+                <div class="lines"></div>
+                <div class="reset-email">
+                    <label>更改邮箱 : </label>
+                    <input type="text" id="newEmail" placeholder="输入新邮箱">
+                    <span class="errors"></span>
+                </div>
+                <div class="send-code">
+                    <label>验证码 : </label>
+                    <input type="text" id="emailCode" placeholder="请输入验证码">
+                    <div id="sendEmailCode">发送验证码</div>
+                    <span class="errors"></span>
+                </div>
+                <div class="preservation" id="modifyEmail">修改</div>
+            </div>
+        </div>
+        <div class="binding-phone">
+            <p>绑定手机 :</p>
+            <div class="phone">
+                <div class="phone-left">当前已绑定手机 : <span id="phone"></span></div>
+                <div class="phone-right">
+                    重置<img src="./images/drop-down.png">
+                </div>
+                <div style="clear: both"></div>
+            </div>
+            <div class="reset">
+                <div class="lines"></div>
+                <div class="reset-phone">
+                    <label>更改手机 : </label>
+                    <input id="newPhone" type="text" placeholder="输入新手机">
+                    <span class="error"></span>
+                </div>
+                <div class="send-code">
+                    <label>验证码 : </label>
+                    <input id="phoneCode" type="text" placeholder="请输入验证码">
+                    <button id="sendCode">发送验证码</button>
+                    <span class="error"></span>
+                </div>
+                <div class="preservation" id="preservation">修改</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/webpage/js/personalData.js"></script>
+<script src="./js/up_img.js"></script>

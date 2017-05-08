@@ -1,0 +1,188 @@
+.content{
+    margin: 50px;
+    margin-left: 300px;
+    background-color: white;
+    min-height: 710px;
+    padding: 30px;
+}
+.withdrawals{
+    width: 100%;
+    font-size: 16px;
+}
+.withdrawals .title{
+    color: #333333;
+    font-weight: bold;
+}
+.withdrawals .lines{
+    width: 100%;
+    height: 1px;
+    background-color: #D7D8DB;
+    margin: 20px 0;
+}
+.condition{
+    width: 100%;
+}
+.condition .state{
+    float: left;
+}
+.condition .state label{
+    display: inline-block;
+    width: 100px;
+}
+.condition .state .stateSelect{
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+}
+.condition .state .stateSelect span{
+    display: inline-block;
+    width: 190px;
+    height: 30px;
+    border: 1px solid #D7D8DB;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.condition .state .stateSelect:hover,.condition .approximateTime:hover{
+    cursor: pointer;
+}
+.condition .state .stateSelect img,.condition .approximateTime img{
+    position: absolute;
+    top:12px;
+    right: 10px;
+}
+.condition .state .stateSelect ul,.condition .approximateTime ul{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    left: -1px;
+    border: 1px solid #D7D8DB;
+    border-bottom: none;
+    z-index: 999999;
+}
+.condition .state .stateSelect ul li,.condition .approximateTime ul li{
+    list-style: none;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #D7D8DB;
+    background-color: white;
+    line-height: 30px;
+}
+.condition .time{
+    float: left;
+    margin-left: 50px;
+}
+.condition .time label{
+    display: inline-block;
+    width: 100px;
+}
+.condition .time input{
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #D7D8DB;
+}
+.condition .approximateTime{
+    float: left;
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 50px;
+}
+.condition .approximateTime span{
+    display: inline-block;
+    width: 190px;
+    height: 30px;
+    border: 1px solid #D7D8DB;
+    line-height: 30px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.condition .query{
+    float: right;
+    display: inline-block;
+    width: 120px;
+    height: 32px;
+    background-color: #DA3644;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 5px;
+}
+.condition .query:hover{
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    border-collapse:collapse;
+    font-size: 14px;
+}
+table thead tr th{
+    height: 50px;
+    border-bottom: 3px solid #D7D8DB;
+}
+table tbody tr td{
+    height: 80px;
+    line-height: 30px;
+    text-align: center;
+    color: #333333;
+}
+table tbody tr td p{
+    color: #969799;
+}
+table tbody tr{
+    border-bottom: 1px solid #D7D8DB;
+}
+.details{
+    position: relative;
+}
+.details img{
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.details:hover{
+    cursor: pointer;
+}
+.bankDetails{
+    position: absolute;
+    width: 309px;
+    height: 161px;
+    background: url("../images/bankbg.png") no-repeat;
+    background-size: 100%;
+    top: 25px;
+    left: 60px;
+    text-align: left;
+    padding: 15px;
+    z-index: 99999;
+}
+.bankDetails div{
+    width: 100%;
+}
+.bankDetails div label{
+    display: inline-block;
+    width: 80px;
+    /*float: left;*/
+}
+.bankDetails div span{
+    /*float: left;*/
+}
+@media screen and (max-width: 1700px){
+    .condition .state{
+        width: 63.5%;
+    }
+    .condition .time{
+        width: 70%;
+        float: left;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .condition .approximateTime{
+        /*margin-top: 20px;*/
+    }
+    .condition .query{
+        float: left;
+        margin-top: 20px;
+    }
+}

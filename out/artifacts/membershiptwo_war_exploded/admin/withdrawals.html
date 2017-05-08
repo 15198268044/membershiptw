@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/admin/css/template.css" rel="stylesheet">
+    <link href="/admin/css/withdrawals.css" rel="stylesheet">
+    <link href="/admin/css/bomBox.css" rel="stylesheet">
+</head>
+<style type="text/css">
+
+    *{ margin:0; padding:0;}
+    .date_selector{
+        font-size: 12px;;
+    }
+    ul,li{ list-style:none;}
+
+    img{border:0 none;}
+
+    /*---------------------------------------demo css--------------------------------------------*/
+
+    .date_selector, .date_selector *{width: auto;height: auto;border: none;background: none;margin: 0;padding: 0;text-align: left;text-decoration: none;}
+
+    .date_selector{background:#fbfbfb;border: 1px solid #ccc;padding: 10px;margin:0;margin-top:-1px;position: absolute;z-index:100000;display:none;border-radius: 3px;box-shadow: 0 0 5px #aaa;box-shadow:0 2px 2px #ccc; width:220px;}
+
+    .date_selector_ieframe{position: absolute;z-index: 99999;display: none;}
+
+    .date_selector .nav{width: 17.5em;}
+
+    .date_selector .nav p{clear: none;}
+
+    .date_selector .month_nav, .date_selector .year_nav{margin: 0 0 3px 0;padding: 0;display: block;position: relative;text-align: center;}
+
+    .date_selector .month_nav{float: left;width: 40%;}
+
+    .date_selector .year_nav{float: left;width: 40%;}
+
+    .date_selector .month_name, .date_selector .year_name{font-weight: bold;line-height: 20px;}
+
+    .date_selector .button{display: block;position: absolute;top: 0;width:18px;height:18px;line-height:16px;font-weight:bold;color:#5985c7;text-align: center;font-size:12px;overflow:hidden;border: 1px solid #ccc;border-radius:2px;}
+
+    .date_selector .button:hover, .date_selector .button.hover{background:#5985c7;color: #fff;cursor: pointer;border-color:#3a930d;}
+
+    .date_selector .prev{left: 0;}
+
+    .date_selector .next{right: 0;}
+
+    .date_selector table{border-spacing: 0;border-collapse: collapse;clear: both;margin: 0; width:220px;}
+
+    .date_selector th, .date_selector td{width: 2.5em;height: 2em;padding: 0 !important;text-align: center !important;color: #666;font-weight: normal;}
+
+    .date_selector th{font-size: 12px;}
+
+    .date_selector td{border:1px solid #f1f1f1;line-height: 2em;text-align: center;white-space: nowrap;color:#5985c7;background: #fff;}
+
+    .date_selector td.today{background: #eee;}
+
+    .date_selector td.unselected_month{color: #ccc;}
+
+    .date_selector td.selectable_day{cursor: pointer;}
+
+    .date_selector td.selected{background:#2b579a;color: #fff;font-weight: bold;}
+
+    .date_selector td.selectable_day:hover, .date_selector td.selectable_day.hover{background:#5985c7;color: #fff;}
+
+    /*-----------------------------------------------------------------------------------*/
+
+</style>
+<body>
+<div class="backstageBox">
+    <div class="header">
+        <div class="title"><span>管理员后台管理系统</span></div>
+        <nav>
+            <ul>
+                <li><a href="/admin/profitSharing.html"><img src="/admin/images/profitSharing.png"><span>分销分润</span></a></li>
+                <li><a href="/admin/distributionSetting.html"><img src="/admin/images/setting.png"><span>分销设置</span></a></li>
+                <li class="active"><a href="/admin/withdrawals.html"><img src="/admin/images/withdrawals.png"><span>提现申请</span></a></li>
+                <li><a href="/admin/bank.html"><img src="/admin/images/bank.png"><span>收款银行</span></a></li>
+                <li><a href="/admin/administration.html"><img src="/admin/images/administration.png"><span>会员管理</span></a></li>
+            </ul>
+            <div class="exit">退出</div>
+        </nav>
+    </div>
+    <form action="/admin/drawals/getDrawalsList.do" method="get" id="administrationListForm">
+        <div class="content">
+            <div class="titleBox">
+                <div class="title">提现申请</div>
+            </div>
+            <div class="w_title_box">
+                <div class="w_title" style="background: #e5e5e5">
+                    <span>管理员填写营业总额（元）</span><br/>
+                    <label id="drawalsStateVo1"></label>
+                </div>
+                <div class="w_title" style="background: #f5f5f5">
+                    <span>申请中金额总和（元）</span><br/>
+                    <label id="drawalsStateVo2"></label>
+                </div>
+                <div class="w_title" style="background: #e5e5e5">
+                    <span>已提现总额总和（元）</span><br/>
+                    <label id="drawalsStateVo3"></label>
+                </div>
+                <div class="w_title" style="background: #f5f5f5; border-right:1px solid #cccccc;border-radius:0 5px 5px 0;">
+                    <span>待提现金额总和（元）</span><br/>
+                    <label id="drawalsStateVo4"></label>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+            <div class="w_table_title">
+                <div class="conditionBox">
+                    <div class="condition" style="width: 40%">
+                        <label class="w_table_span">筛选&nbsp;</label>
+                        <input style="padding-left: 10px" type="text" class="w_title_input" id="findvalue" dataName="form" dataType="string" name="findvalue" value=""/>
+                        <div class="achievement screen">
+                            <span class="screenText" dataName="form" dataType="string" name="findtype" value="" id="findtype">全部</span>
+                            <img src="/admin/images/triangle.png">
+                            <ul>
+                                <li value="">全部</li>
+                                <li value="0">流水号</li>
+                                <li value="1">银行账户</li>
+                                <li value="2">申请人</li>
+                                <li value="3">联系电话</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="condition" style="width: 24%">
+                        <label class="w_table_span">收款银行&nbsp;</label>
+                        <div class="achievement screen" id="bank">
+                            <span class="screenText" dataName="form" dataType="int" name="bankId" value="">全部</span>
+                            <img src="/admin/images/triangle.png">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="condition" style="width: 24%">
+                        <label class="w_table_span">提现状态&nbsp;</label>
+                        <div class="achievement screen">
+                            <span class="screenText" dataName="form" dataType="int" name="state" value="">全部</span>
+                            <img src="/admin/images/triangle.png">
+                            <ul>
+                                <li value="">全部</li>
+                                <li value="0">申请中</li>
+                                <li value="1">银行处理中</li>
+                                <li value="2">提现成功</li>
+                                <li value="3">提现失败</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="condition" style="width: 45%">
+                        <label class="w_table_span">申请时间&nbsp;</label>
+                        <input style="padding-left: 10px" type="text" id="startDateTime" class="w_title_input date_picker" dataName="form" dataType="date" name="startDateTime" value=""> -
+                        <input style="padding-left: 10px" type="text" id="endDateTime" class="w_title_input date_picker" dataName="form" dataType="date" name="endDateTime" value="">
+                    </div>
+                    <div class="condition" id="time" style="width: 21%" dataName="form" dataType="int" name="time" value="">
+                        <span class="time" value="7">最近7天&nbsp;</span>
+                        <span class="time" value="30">最近30天</span>
+                    </div>
+                    <div class="condition" style="width: 10%">
+                        <input id="query" style="" value="查询" type="button">
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+
+                <table class="w_table" border="0" cellpadding="0" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <td>编号</td>
+                        <td>流水号</td>
+                        <td>申请时间</td>
+                        <td>处理时间</td>
+                        <td>提现账户</td>
+                        <td>申请人</td>
+                        <td>实际提现金额</td>
+                        <td>状态</td>
+                        <td>处理结果</td>
+                        <td>操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div class="pageBar" style="margin-bottom: 50px">
+
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+<div id="bombBox">
+
+</div>
+</body>
+<script type="text/javascript" src="/admin/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/admin/js/dataPack.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var date=$('.date_picker').date_input();
+    })
+</script>
+<script type="text/javascript" src="/admin/js/commons.js"></script>
+<script src="/admin/js/withdrawals.js"></script>
+<script src="/admin/js/bomBox.js"></script>
+</html>

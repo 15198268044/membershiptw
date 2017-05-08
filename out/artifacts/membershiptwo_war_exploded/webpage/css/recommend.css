@@ -1,0 +1,63 @@
+.content{
+    margin: 50px;
+    margin-left: 300px;
+    background-color: white;
+    min-height: 710px;
+    padding: 30px;
+}
+.recommend{
+    width: 100%;
+    font-size: 16px;
+    color: #333333;
+}
+.recommend .title{
+    color: #333333;
+    font-weight: bold;
+}
+.recommend .lines{
+    width: 100%;
+    height: 1px;
+    background-color: #D7D8DB;
+    margin: 20px 0;
+}
+.modeOne{
+    width: 100%;
+}
+.modeOne>div{
+    margin: 10px 50px !important;
+}
+.modeOne img{
+    width: 220px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.modeTwo{
+    margin-top: 20px;
+}
+.modeTwo div,.modeTwo input{
+    float: left;
+    outline: none;
+    margin-left: 30px;
+}
+.invitationCode{
+    width: 400px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #DBDBDB;
+    color: #333333;
+    margin-top: 30px;
+}
+.copyLink{
+    width: 164px;
+    height: 32px;
+    background-color: #DA3644;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.copyLink:hover{
+    cursor: pointer;
+}

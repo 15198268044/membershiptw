@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./css/template.css" rel="stylesheet">
+    <link href="./css/profitSharing.css" rel="stylesheet">
+    <link href="./css/bomBox.css" rel="stylesheet">
+</head>
+<body>
+<div class="backstageBox">
+    <div class="header">
+        <div class="title"><span>管理员后台管理系统</span></div>
+        <nav>
+            <ul>
+                <li class="active"><a href="./profitSharing.html"><img src="./images/profitSharing.png"><span>分销分润</span></a></li>
+                <li><a href="./distributionSetting.html"><img src="./images/setting.png"><span>分销设置</span></a></li>
+                <li><a href="./withdrawals.html"><img src="./images/withdrawals.png"><span>提现申请</span></a></li>
+                <li><a href="./bank.html"><img src="./images/bank.png"><span>收款银行</span></a></li>
+                <li><a href="./administration.html"><img src="./images/administration.png"><span>会员管理</span></a></li>
+            </ul>
+            <div class="exit">退出</div>
+        </nav>
+
+    </div>
+    <div class="content">
+        <div class="titleBox">
+            <div class="title">分销分润</div>
+        </div>
+        <div class="profitSharing">
+            <div class="condition">
+                <div class="phone" style="position: relative">
+                    <label>ID :</label><input type="text" id="account"  placeholder="请输入手机号或用户名" autocomplete="off">
+                    <ul class="tips" id="tips">
+                    </ul>
+                </div>
+                <div class="query" id="query">查询</div>
+                <div class="money"><label>业绩金额 :</label><input id="money" type="text"> 元</div>
+                <div style="clear: both"></div>
+            </div>
+            <div class="table">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th>级别</th>
+                            <th>分成（元）</th>
+                            <th>占比</th>
+                            <th>分成用户</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>一级用户</td>
+                            <td id="oneMoney"></td>
+                            <td id="one"></td>
+                            <td id="onename" class="userName"></td>
+                        </tr>
+                        <tr>
+                            <td>二级用户</td>
+                            <td id="twoMoney"></td>
+                            <td id="two"></td>
+                            <td id="twoname" class="userName"></td>
+                        </tr>
+                        <tr>
+                            <td>三级用户</td>
+                            <td id="threeMoney"></td>
+                            <td id="three"></td>
+                            <td id="threename" class="userName"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="totalAmount"><p>分配总金额（元）</p><span id="moneyTatal"></span></div>
+                <div style="clear: both"></div>
+            </div>
+            <div class="actualMoney">分配后实际分成金额<span id="actualMoney">0</span>元</div>
+            <div class="confirm" id="confirm">确认分配</div>
+        </div>
+    </div>
+    <div class="seeInformation">
+        <img class="close" src="/admin/images/close.png">
+        <div class="information" style="margin-top: 80px">
+            <label>用户名 :</label>
+            <span id="userName"></span>
+        </div>
+        <div class="information">
+            <label>会员手机 :</label>
+            <span id="phone"></span>
+        </div>
+        <div class="information">
+            <label>真实姓名 :</label>
+            <span id="realName"></span>
+        </div>
+        <div class="information">
+            <label>身份证号 :</label>
+            <span id="idCard"></span>
+        </div>
+        <div class="information">
+            <label>推荐人 :</label>
+            <span id="tjr"></span>
+        </div>
+        <div class="information">
+            <label>账户状态 :</label>
+            <span id="state"></span>
+        </div>
+        <div class="information">
+            <label>提现方式 :</label>
+            <span id="mode"></span>
+        </div>
+        <div class="information bank">
+            <label>提现发卡银行 :</label>
+            <span id="bankId"></span>
+        </div>
+        <div class="information bank">
+            <label>开户银行 :</label>
+            <span id="bankAccount"></span>
+        </div>
+        <div class="information bank">
+            <label>银行卡卡号 :</label>
+            <span id="bankNum"></span>
+        </div>
+        <div class="information bank">
+            <label>开卡人姓名 :</label>
+            <span id="bankName"></span>
+        </div>
+        <div class="information zfb">
+            <label>支付宝账号 :</label>
+            <span id="zfbAccount"></span>
+        </div>
+    </div>
+    <div class="seeInformationBg"></div>
+</div>
+<div id="bombBox">
+
+</div>
+<script src="/admin/js/jquery-1.11.3.min.js"></script>
+<script src="/admin/js/commons.js"></script>
+<script src="/admin/js/bomBox.js"></script>
+<script src="/admin/js/profitSharing.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+.content{
+    margin: 50px;
+    margin-left: 300px;
+    padding: 35px;
+    min-height: 770px;
+    background: white;
+}
+.txzh_box{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.txfs{
+    cursor: pointer;
+    width: 340px;
+    background: #ecedf1;
+    float: left;
+    text-align: center;
+    line-height: 36px;
+    margin-left: 50px;
+    padding: 40px 0;
+}
+.txfs>p{
+    font-weight: bold;
+}
+.txzh_box>p{
+    font-size: 12px;
+    color: red;
+}
+.txfs.active{
+    background: #d93644;
+}
+.tx_box_div{
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+.tx_box_div>.tx_div_tr:first-child{
+    margin-top: 0;
+}
+.tx_div_tr{
+    width: 100%;
+    margin-top: 20px;
+}
+.input_title{
+    font-size: 14px;
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+.tx_ts_span{
+    margin-left: -30px;
+    font-size: 14px;
+    color: #cccccc;
+}
+.tx_input{
+    width: 500px;
+    outline: none;
+    padding: 5px 10px;
+}
+.btn_tx_submit{
+    background: none;
+    border: 0;
+    outline: none;
+    padding: 7px 30px;
+    background: #d93644;
+    color: white;
+    cursor: pointer;
+}
+.back{
+    background: none;
+    border: 0;
+    margin-left: 10px;
+    outline: none;
+    padding: 7px 30px;
+    background: #ecedf1;
+    color: black;
+    cursor: pointer;
+}

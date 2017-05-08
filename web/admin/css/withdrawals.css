@@ -1,0 +1,154 @@
+
+.w_title_box{
+    width: 60%;
+    margin:0 auto;
+    margin-top: 50px;
+}
+.w_title{
+    border: 1px solid #cccccc;
+    border-right: 0;
+    float: left;
+    text-align: center;
+    width: 24.5%;
+    height: 70px;
+}
+.w_title span{
+    line-height: 45px;
+}
+.w_title:first-child{
+    border-radius:5px 0 0 5px;
+}
+.w_table_title{
+    /*position: relative;*/
+    width: 80%;
+    margin: 0 auto;
+}
+.w_title_input{
+    width: 160px;
+    height: 30px;
+    outline: none;
+    border: 1px solid #D7D8DB;
+}
+.conditionBox{
+    width: 1200px;
+    margin: 0 auto;
+}
+.condition{
+    float: left;
+    width: 30%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.time{
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+}
+.time:hover{
+    cursor: pointer;
+}
+.w_table_span{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+#query{
+    background: none;
+    border: 0;
+    width: 160px;
+    height: 32px;
+    background: #2e85e0;
+    color: white;
+    vertical-align: bottom;
+    outline: none;
+    margin-left: 10px;
+}
+#query:hover{
+    cursor: pointer;
+}
+.w_title_select{
+    width: 9%;
+    height: 40px;
+    outline: none;
+}
+.w_table{
+    margin-top: 30px;
+    width: 100%;
+    border-top: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+}
+.w_table th,.w_table td{
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+}
+.w_table td{
+    font-size: 14px;
+}
+.td_span{
+    float: left;
+    display: inline-block;
+    /*width: 40%;*/
+    text-align: right;
+}
+.td_label{
+    float: left;
+    display: inline-block;
+    /*width: 56%;*/
+    text-align: left;
+}
+.w_ul{
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+}
+.w_ul li{
+    list-style: none;
+    float: left;
+    line-height: 30px;
+    padding: 0px 10px;
+}
+.achievement:hover{
+    /*float: left;*/
+    cursor: pointer;
+}
+.achievement img{
+    position: absolute;
+    top:12px;
+    right: 10px;
+}
+.achievement ul{
+    display: none;
+    position: absolute;
+    width: 170px;
+    top: 30px;
+    left: 0;
+    border: 1px solid #D7D8DB;
+    border-bottom: none;
+    z-index: 999999;
+}
+.achievement ul li{
+    list-style: none;
+    width: 170px;
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #D7D8DB;
+    background-color: white;
+    line-height: 30px;
+}
+.achievement{
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    /*margin-left: 20px;*/
+}
+.achievement span{
+    display: inline-block;
+    width: 160px;
+    height: 32px;
+    border: 1px solid #D7D8DB;
+    line-height: 30px;
+    padding-left: 10px;
+    font-size: 14px;
+}

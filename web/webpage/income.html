@@ -1,0 +1,141 @@
+
+    <div class="contentRight">
+        <div class="contentBox">
+            <div class="content">
+                <div class="content_title_div">
+                    <div class="title_div" style="margin-left: 0">
+                        <div class="mysr_box">
+                            <img src="/webpage/images/sr.png" alt=""/>
+                            <span class="nbtext">￥<label id="already"></label></span>
+                        </div>
+                        <span class="title_span_left">累积收益<label></label></span>
+                        <span class="title_span_right"><a class="btn_more btn_more1">查看明细>></a></span>
+                    </div>
+                    <div class="title_div">
+                        <div class="mysr_box">
+                            <img src="/webpage/images/yj.png" alt=""/>
+                            <span class="nbtext">￥<label id="balance"></label></span>
+                        </div>
+                        <span class="title_span_left">我的业绩<label></label></span>
+                        <span class="title_span_right"><a class="btn_more btn_more2">查看明细>></a></span>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="content_fc_div">
+                    <div class="title_div_fc" style="border-bottom: 2px solid #fd8937">
+                        <span class="title_span_left">一级用户分成:</span>
+                        <span class="">￥&nbsp;<label class="fc" id="gradeone"></label></span>
+                        <img src="/webpage/images/fc_1.png" alt="" class="title_span_right_2"/>
+                    </div>
+                    <div class="title_div_fc" style="border-bottom: 2px solid #e45864">
+                        <span class="title_span_left">二级用户分成:</span>
+                        <span class="">￥&nbsp;<label class="fc" id="gradetwo"></label></span>
+                        <img src="/webpage/images/fc_2.png" alt="" class="title_span_right_2"/>
+                    </div>
+                    <div class="title_div_fc" style="border-bottom: 2px solid #12aefa;margin-right: 0">
+                        <span class="title_span_left">三级用户分成:</span>
+                        <span class="">￥&nbsp;<label class="fc" id="gradethree"></label></span>
+                        <img src="/webpage/images/fc_3.png" alt="" class="title_span_right_2"/>
+                    </div>
+                    <div style="clear: both;margin-top: 20px;"></div>
+                    <div class="title_div_fc" style="border-bottom: 2px solid #fd8937">
+                        <span class="title_span_left">用户分润总金额:</span>
+                        <span class="">￥&nbsp;<label class="fc" id="tatalMoney"></label></span>
+                        <img src="/webpage/images/fc_1.png" alt="" class="title_span_right_2"/>
+                    </div>
+                    <div class="title_div_fc" style="border-bottom: 2px solid #e45864">
+                        <span class="title_span_left">已提现金额:</span>
+                        <span class="">￥&nbsp;<label class="fc" id="drawalMoney"></label></span>
+                        <img src="/webpage/images/fc_2.png" alt="" class="title_span_right_2"/>
+                    </div>
+                    <div class="title_div_fc" style="border-bottom: 2px solid #12aefa;margin-right: 0">
+                        <span class="title_span_left">一二三分成金额:</span>
+                        <span class="">￥&nbsp;<label class="fc" id="gradeCount"></label></span>
+                        <img src="/webpage/images/fc_3.png" alt="" class="title_span_right_2"/>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div id="container"></div>
+            </div>
+</div>
+        </div>
+    <script src="/webpage/js/jquery-1.11.3.min.js"></script>
+    <script src="/webpage/js/commons.js"></script>
+    <script src="/webpage/js/income.js"></script>-
+<!--<script type="text/javascript" src="/webpage/js/jquery-1.5.2.min.js"></script>-->
+<!--<script type="text/javascript" src="/webpage/js/highcharts.js"></script>-->
+<!--<script type="text/javascript" src="/webpage/js/theme/grid.js"></script>-->
+    <!--<script>-->
+        <!--var chart;-->
+        <!--$(document).ready(function() {-->
+<!--//折线图-->
+            <!--chart = new Highcharts.Chart({-->
+                <!--chart: {-->
+                    <!--renderTo: 'container',          //放置图表的容器-->
+                    <!--plotBackgroundColor: null,-->
+                    <!--plotBorderWidth: null,-->
+                    <!--defaultSeriesType: 'line'-->
+                <!--},-->
+                <!--title: {-->
+                    <!--text: '   '//标题-->
+                <!--},-->
+                <!--subtitle: {-->
+                    <!--text: '   '//副标题-->
+                <!--},-->
+                <!--xAxis: {//X轴数据-->
+                    <!--categories: ['一月份', '二月份', '三月份', '四月份', '五月份', '六月份', '七月份', '八月份', '九月份', '十月份', '十一月份', '十二月份'],-->
+                    <!--labels: {-->
+                        <!--rotation: -45, //字体倾斜-->
+                        <!--align: 'right',-->
+                        <!--style: { font: 'normal 13px 宋体' }-->
+                    <!--}-->
+                <!--},-->
+                <!--yAxis: {//Y轴显示文字-->
+                    <!--title: {-->
+                        <!--text: '产量/百万'-->
+                    <!--}-->
+
+                <!--},-->
+                <!--tooltip: {-->
+                    <!--enabled: true,-->
+                    <!--formatter: function() {-->
+                        <!--return '<b>' + this.x + '</b><br/>' + this.series.name + ': ' + Highcharts.numberFormat(this.y, 1);-->
+                    <!--}-->
+                <!--},-->
+                <!--plotOptions: {-->
+                    <!--line: {-->
+                        <!--dataLabels: {-->
+                            <!--enabled: true-->
+                        <!--},-->
+                        <!--enableMouseTracking: true//是否显示title-->
+                    <!--}-->
+                <!--},-->
+                <!--series: [-->
+                    <!--{-->
+                        <!--name: '杭州',-->
+                        <!--data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]-->
+                    <!--},-->
+                    <!--{-->
+                        <!--name: '江西',-->
+                        <!--data: [4.0, 2.9, 5.5, 24.5, 18.4, 11.5, 35.2, 36.5, 23.3, 38.3, 23.9, 3.6]-->
+                    <!--}, {-->
+                        <!--name: '北京',-->
+                        <!--data: [14.0, 12.9, 15.5, 14.5, 28.4, 21.5, 15.2, 16.5, 13.3, 28.3, 13.9, 13.6]-->
+                    <!--}, {-->
+                        <!--name: '湖南',-->
+                        <!--data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]-->
+                    <!--}]-->
+            <!--});-->
+        <!--});-->
+        <!--/**-->
+         <!--*-->
+         <!--*-->
+         <!--*-->
+         <!--*-->
+         <!--var se =  sessionStorage;-->
+         <!--se.userId=12;-->
+         <!--se.username=26;-->
+         <!--*/-->
+    <!--</script>-->
+
+

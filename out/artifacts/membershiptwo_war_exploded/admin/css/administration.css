@@ -1,0 +1,400 @@
+.member{
+    width: 100%;
+    margin-top: 20px;
+}
+.member .condition{
+    width: 1200px;
+    margin: 0 auto;
+}
+.condition .addMember{
+    float: left;
+    width: 110px;
+    height: 34px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 34px;
+    color: white;
+    background-color: #2E86E1;
+}
+.condition .addMember:hover{
+    cursor: pointer;
+}
+.condition .memberName{
+    float: left;
+    margin-left: 20px;
+}
+.condition .memberName input{
+    width: 200px;
+    height: 30px;
+    outline: none;
+    padding-left: 10px;
+    border: 1px solid #D7D8DB;
+}
+.condition .achievement:hover{
+    float: left;
+    cursor: pointer;
+}
+.condition .achievement img{
+    position: absolute;
+    top:12px;
+    right: 10px;
+}
+.condition .achievement ul{
+    display: none;
+    position: absolute;
+    width: 200px;
+    top: 31px;
+    left: 0;
+    border: 1px solid #D7D8DB;
+    border-bottom: none;
+    z-index: 999999;
+    margin-left: 23px;
+}
+.condition .achievement ul li{
+    list-style: none;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #D7D8DB;
+    background-color: white;
+    line-height: 30px;
+}
+.condition .achievement{
+    float: left;
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.condition .achievement span{
+    display: inline-block;
+    width: 190px;
+    height: 30px;
+    border: 1px solid #D7D8DB;
+    line-height: 30px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.condition .time{
+    float: left;
+    margin-left: 20px;
+}
+.condition .time input{
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #D7D8DB;
+}
+.condition .query{
+    float: left;
+    display: inline-block;
+    width: 120px;
+    height: 32px;
+    background-color: #CCCCCC;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 5px;
+    /*margin-top: 40px;*/
+    margin-left: 20px;
+}
+.condition .query:hover{
+    cursor: pointer;
+}
+.memberTable{
+    width: 100%;
+    font-size: 14px;
+    margin-top: 50px;
+}
+.memberTable .select{
+    margin-left: 50px;
+}
+.memberTable .select span{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #FF0000;
+}
+.memberTable .select span:hover{
+    cursor: pointer;
+}
+.memberTable table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+.memberTable table thead tr th{
+    border: 1px solid #CCCCCC;
+    border-left: none;
+    height: 40px;
+    background-color: #F6F6F6;
+}
+.memberTable table tbody tr{
+    border-bottom: 1px solid #F6F6F6;
+}
+.memberTable table tbody tr td{
+    color: #999999;
+    line-height: 40px;
+}
+.memberTable table tbody tr td img{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    vertical-align: middle;
+}
+.operation span{
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+}
+.operation span:hover{
+    cursor: pointer;
+}
+.operation .edit{
+    color: #333333;
+}
+.operation .del{
+    color: #ff0000;
+}
+
+.modifyMemberBg{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    z-index: 9998;
+}
+.modifyMember{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -600px;
+    margin-top: -305px;
+    width: 1200px;
+    height: 610px;
+    z-index: 9999;
+    background-color: white;
+}
+
+.modifyInformation{
+    width: 450px;
+    float: left;
+    margin-top: 80px;
+}
+.modifyInformation .information{
+    width: 100%;
+    height: 66px;
+    /*overflow: hidden;*/
+    /*margin-top: 20px;*/
+}
+.information label,.choice label{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+.information input{
+    width: 300px;
+    height: 34px;
+    outline: none;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+.choice{
+    width: 100%;
+}
+.choice input{
+    margin-left: 40px;
+}
+.modify_user{
+    width: 100%;
+    text-align: center;
+}
+#modify_add_user{
+    background: none;
+    border: 0;
+    background: #3087e1;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 40px;
+}
+.error{
+    display: inline-block;
+    color: red;
+    font-size: 14px;
+    width: 72%;
+    margin-left: 28%;
+    height: 26px;
+}
+.line{
+    width: 1px;
+    height: 410px;
+    float: left;
+    background-color: #E3E3E3;
+    margin-top: 70px;
+    margin-left: 80px;
+}
+.close{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.screen{
+    position: relative;
+}
+.screen:hover{
+    float: left;
+    cursor: pointer;
+}
+.screen img{
+    position: absolute;
+    top:15px;
+    right: 30px;
+    -webkit-transform:rotate(-90deg)
+}
+.screen label{
+    display: inline-block;
+    width: 100px;
+    float: left;
+    margin-top: 10px;
+}
+.screen ul{
+    display: none;
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 440px;
+    border: 1px solid #D7D8DB;
+    border-bottom: none;
+    z-index: 999999;
+}
+.screen ul li{
+    list-style: none;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #D7D8DB;
+    background-color: white;
+    line-height: 30px;
+}
+.screen{
+    float: left;
+    position: relative;
+    display: inline-block;
+}
+.screen span{
+    display: inline-block;
+    width: 280px;
+    height: 38px;
+    border: 1px solid #A9A9A9;
+    line-height: 38px;
+    padding-left: 30px;
+    margin-left: 23px;
+    font-size: 14px;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.tips{
+    position: absolute;
+    display: none;
+    width: 312px;
+    max-height: 210px;
+    background-color: white;
+    border: 1px solid #A9A9A9;
+    left: 125px;
+    top: 37px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 900;
+}
+.tips::-webkit-scrollbar {
+    width: 8px;
+}
+.tips::-webkit-scrollbar-thumb {
+    background-color: #A9A9A9;
+}
+.tips::-webkit-scrollbar-track {
+    background-color: #F1F1F1;
+} /* 滚动条的滑轨背景颜色 */
+.tips::-webkit-scrollbar-button {
+    background-color: #F1F1F1;
+} /* 滑轨两头的监听按钮颜色 */
+.tips li{
+    list-style: none;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.tips li:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+ul,li{ list-style:none;}
+
+img{border:0 none;}
+input{
+    outline: none;
+}
+/*---------------------------------------demo css--------------------------------------------*/
+
+.date_selector, .date_selector *{width: auto;height: auto;border: none;background: none;margin: 0;padding: 0;text-align: left;text-decoration: none;}
+
+.date_selector{background:#fbfbfb;border: 1px solid #ccc;padding: 10px;margin:0;margin-top:-1px;position: absolute;z-index:100000;display:none;border-radius: 3px;box-shadow: 0 0 5px #aaa;box-shadow:0 2px 2px #ccc; width:220px;}
+
+.date_selector_ieframe{position: absolute;z-index: 99999;display: none;}
+
+.date_selector .nav{width: 17.5em;}
+
+.date_selector .nav p{clear: none;}
+
+.date_selector .month_nav, .date_selector .year_nav{margin: 0 0 3px 0;padding: 0;display: block;position: relative;text-align: center;}
+
+.date_selector .month_nav{float: left;width: 40%;}
+
+.date_selector .year_nav{float: left;width: 40%;}
+
+.date_selector .month_name, .date_selector .year_name{font-weight: bold;line-height: 20px;}
+
+.date_selector .button{display: block;position: absolute;top: 0;width:18px;height:18px;line-height:16px;font-weight:bold;color:#5985c7;text-align: center;font-size:12px;overflow:hidden;border: 1px solid #ccc;border-radius:2px;}
+
+.date_selector .button:hover, .date_selector .button.hover{background:#5985c7;color: #fff;cursor: pointer;border-color:#3a930d;}
+
+.date_selector .prev{left: 0;}
+
+.date_selector .next{right: 0;}
+
+.date_selector table{border-spacing: 0;border-collapse: collapse;clear: both;margin: 0; width:220px;}
+
+.date_selector th, .date_selector td{width: 2.5em;height: 2em;padding: 0 !important;text-align: center !important;color: #666;font-weight: normal;}
+
+.date_selector th{font-size: 12px;}
+
+.date_selector td{border:1px solid #f1f1f1;line-height: 2em;text-align: center;white-space: nowrap;color:#5985c7;background: #fff;}
+
+.date_selector td.today{background: #eee;}
+
+.date_selector td.unselected_month{color: #ccc;}
+
+.date_selector td.selectable_day{cursor: pointer;}
+
+.date_selector td.selected{background:#2b579a;color: #fff;font-weight: bold;}
+
+.date_selector td.selectable_day:hover, .date_selector td.selectable_day.hover{background:#5985c7;color: #fff;}
+
+/*-----------------------------------------------------------------------------------*/

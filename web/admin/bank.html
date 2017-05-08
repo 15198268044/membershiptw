@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/admin/css/template.css" rel="stylesheet">
+    <link href="/admin/css/bank.css" rel="stylesheet">
+    <link href="/admin/css/bomBox.css" rel="stylesheet">
+</head>
+<body>
+<div class="backstageBox">
+    <div class="header">
+        <div class="title"><span>管理员后台管理系统</span></div>
+        <nav>
+            <ul>
+                <li><a href="./profitSharing.html"><img src="/admin/images/profitSharing.png"><span>分销分润</span></a></li>
+                <li><a href="./distributionSetting.html"><img src="/admin/images/setting.png"><span>分销设置</span></a></li>
+                <li><a href="./withdrawals.html"><img src="/admin/images/withdrawals.png"><span>提现申请</span></a></li>
+                <li class="active"><a href="./bank.html"><img src="/admin/images/bank.png"><span>收款银行</span></a></li>
+                <li><a href="./administration.html"><img src="/admin/images/administration.png"><span>会员管理</span></a></li>
+            </ul>
+            <div class="exit">退出</div>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="titleBox">
+            <div class="title">收款银行</div>
+        </div>
+        <div class="bank_box">
+            <h4>
+                <span>银行列表</span>丨<span id="add_bank">添加银行</span>
+            </h4>
+            <table id="bank_table" border="0" cellspacing="0" cellpadding="0">
+                <thead>
+                <tr>
+                    <th width="25%">编号</th>
+                    <th width="25%">银行名称</th>
+                    <th width="25%">状态</th>
+                    <th width="25%">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="all_bg">
+    <div class="add_bank_box">
+        <div class="add_bank_title">
+            <h4 style="width: 45%;text-align: left;float: left">添加银行卡</h4>
+            <h4 style="width: 55%;text-align: right;float: left"><a href="javascript:void(0)" class="add_bank_close">X</a></h4>
+            <div style="clear: both"></div>
+        </div>
+        <div class="add_bank_input_box">
+            <div class="bank_tr">
+                <span class="bank_input_title">银行名称</span>
+                <input type="text" class="bank_input" id="bankname"/>
+            </div>
+        </div>
+        <div class="add_bank_bottom">
+            <span id="btn_add_bank">添加</span>
+            &nbsp;
+            <span class="add_bank_close">关闭</span>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+<div class="modifyBankBg">
+    <div class="modifyBank">
+        <div class="add_bank_title">
+            <h4 style="width: 45%;text-align: left;float: left">编辑银行信息</h4>
+            <h4 style="width: 55%;text-align: right;float: left"><a href="javascript:void(0)" class="add_bank_close">X</a></h4>
+            <div style="clear: both"></div>
+        </div>
+        <div class="add_bank_input_box">
+            <div class="bank_tr">
+                <span class="bank_input_title">银行名称</span>
+                <input type="text" class="bank_input" id="bank"/>
+            </div>
+            <div class="state" id="state">
+                <span class="bank_input_title">状态</span>
+                <input type="radio" class="bank_input" name="state" value="0"/> 禁用
+                <input type="radio" class="bank_input" name="state" value="1"/> 启用
+            </div>
+        </div>
+        <div class="add_bank_bottom">
+            <span id="modify">完成</span>
+            &nbsp;
+            <span class="add_bank_close">关闭</span>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+<div id="bombBox">
+
+</div>
+</body>
+<script type="text/javascript" src="/admin/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/admin/js/commons.js"></script>
+<script src="/admin/js/bomBox.js"></script>
+<script src="/admin/js/bank.js"></script>
+</html>
